@@ -14,6 +14,7 @@ function myFunction() {
         text3= " guesses!";
         let result = text1.concat(text2).concat(text3);
         window.alert(result);
+        leaderboard();
 
     }
     else{
@@ -31,6 +32,7 @@ function myFunction() {
             q = 200;
             let string1="You ran out of guesses it's a kitten";
             window.alert(string1);
+            leaderboard();
 
 
         }
@@ -56,6 +58,14 @@ function drawImage() {
 
     cv.style.width = w + "px";  // enlarge canvas by stretching
     cv.style.height = h + "px";
+
+
+
+}
+
+function leaderboard(){
+    window.location.href="leaderboard.html";
+
 
 
 
