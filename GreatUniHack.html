@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
+  </head>
+  <body>
+    <main id="main-doc">
+      <nav id="navbar">
+        <header id="header"><i class="fas fa-icons"></i> Claritee</header>
+        <ul>
+        <li><a class ="nav-link" href="#play" id="play-link">PLAY</a></li>
+        <li><a class ="nav-link" href="#about-us">About Us</a></li>
+        <li><a class ="nav-link" href="#faq">FAQ</a></li>
+        <li><a class ="nav-link" href="#charities">Charities</a></li>
+        <li><a class ="nav-link" href="#contact-us">Contact Us</a></li>
+        </ul>
+      </nav>
+      <section class="main-section" id="about-us">
+        <header><i class="fas fa-game-board"></i> PLAY</header>
+        <p>This will eventually open a new webpage that lets you play the game</p>
+      </section>
+      <section class="main-section" id="faq">
+        <header><i class="fas fa-address-card"></i> About Us</header>
+        <p>Clarity for Charity! By using Claritee you give back to your favourite cause by playing a fun picture-based activity every day :)</p>
+      </section>
+      <section class="main-section" id="charities">
+        <header><i class="fas fa-question-square"></i> FAQ</header>
+        <details>
+            <summary>
+                What are the rules?
+            </summary>
+            <p>If I find out I'll tell you</p>
+        </details>
+      </section>
+      <section class="main-section" id="contact-us">
+        <header><i class="fas fa-book-heart"></i> Charities</header>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Charity-1')" id="defaultOpen">Charity 1</button>
+            <button class="tablinks" onclick="openCity(event, 'Charity-2')">Charity 2</button>
+            <button class="tablinks" onclick="openCity(event, 'Charity-3')">Charity 3</button>
+          </div>
+          
+          <!-- Tab content -->
+          <div id="Charity-1" class="tabcontent">
+            <h3>Charity 1</h3>
+            <p>Lorem ipsum modus ponen ex quad libatet reductio ad absurdum</p>
+          </div>
+          
+          <div id="Charity-2" class="tabcontent">
+            <h3>Charity 2</h3>
+            <p>Enter information here ig</p>
+          </div>
+          
+          <div id="Charity-3" class="tabcontent">
+            <h3>Charity 3</h3>
+            <p>Tokyo is the capital of Japan. Factual. </p>
+          </div>
+          <script>
+            function openCity(evt, cityName) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(cityName).style.display = "block";
+              evt.currentTarget.className += " active";
+            }
+            
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+            </script>
+      </section>
+      <section class="main-section" id="charities">
+        <header><i class="fas fa-address-book"></i> Contact Us</header>
+        <form>
+            <fieldset>
+                <label id="email-label"><h3>Email: </h3><input type="email" id="email" placeholder="yes@example.com" required/></label>
+            </fieldset>
+            <fieldset>
+                <h3>Enquiry</h3>
+                <label><textarea id="additional-comments" placeholder="Any additional comments?"></textarea></label>
+          </fieldset>
+          <input type="submit" id="submit"/>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
